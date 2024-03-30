@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{198A4B0F-A310-46E8-9B15-DFEBDF3D88EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base">
+      <HintPath>G:\UDDD\Buoi9\ThuVien\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base">
+      <HintPath>G:\UDDD\Buoi9\ThuVien\Syncfusion.DocIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChart.Base">
+      <HintPath>G:\UDDD\Buoi9\ThuVien\Syncfusion.OfficeChart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base">
+      <HintPath>G:\UDDD\Buoi9\ThuVien\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BanHang.Designer.cs">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_PhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_PhieuNhap.Designer.cs">
+      <DependentUpon>ChiTiet_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoiTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiTra.Designer.cs">
+      <DependentUpon>DoiTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuyetDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuyetDonHang.Designer.cs">
+      <DependentUpon>DuyetDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelExport.cs" />
+    <Compile Include="FileCommon.cs" />
+    <Compile Include="frm_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhanVien.Designer.cs">
+      <DependentUpon>frm_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="NhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapHang.Designer.cs">
+      <DependentUpon>NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanQuyen.Designer.cs">
+      <DependentUpon>PhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QL_BACHHOADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_BACHHOADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SanPham.Designer.cs">
+      <DependentUpon>frm_SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_PhieuNhap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_PhieuNhap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_PN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_PN.Designer.cs">
+      <DependentUpon>Report_PN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BanHang.resx">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_PhieuNhap.resx">
+      <DependentUpon>ChiTiet_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiTra.resx">
+      <DependentUpon>DoiTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DuyetDonHang.resx">
+      <DependentUpon>DuyetDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhanVien.resx">
+      <DependentUpon>frm_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapHang.resx">
+      <DependentUpon>NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanQuyen.resx">
+      <DependentUpon>PhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frm_SanPham.resx">
+      <DependentUpon>frm_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_PhieuNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_PhieuNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_PN.resx">
+      <DependentUpon>Report_PN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QL_BACHHOADataSet.xsc">
+      <DependentUpon>QL_BACHHOADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BACHHOADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_BACHHOADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_BACHHOADataSet.xss">
+      <DependentUpon>QL_BACHHOADataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{e315f6ac-35a9-41fb-85a1-4ea839a4635a}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{C88C18DD-5123-4E62-9F4B-360569BBA5F5}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{e658e031-fd34-4bd7-95e3-16591d34e732}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\dangnhap.gif" />
+    <Content Include="Images\Design\1024x768-cancel-button-8627441-6846977.gif" />
+    <Content Include="Images\Design\ban-hang.png" />
+    <Content Include="Images\Design\doi-tra.jpg" />
+    <Content Include="Images\Design\girl.png" />
+    <Content Include="Images\Design\Home-icon.png" />
+    <Content Include="Images\Design\icons8-cash.gif" />
+    <Content Include="Images\Design\icons8-done.gif" />
+    <Content Include="Images\Design\icons8-dots-loading.gif" />
+    <Content Include="Images\Design\icons8-edit2.gif" />
+    <Content Include="Images\Design\icons8-edit_gif.gif" />
+    <Content Include="Images\Design\icons8-error.gif" />
+    <Content Include="Images\Design\icons8-excel-48.png" />
+    <Content Include="Images\Design\icons8-eye.gif" />
+    <Content Include="Images\Design\icons8-plus.gif" />
+    <Content Include="Images\Design\icons8-print.gif" />
+    <Content Include="Images\Design\icons8-save.gif" />
+    <Content Include="Images\Design\icons8-search.gif" />
+    <Content Include="Images\Design\icons8-synchronize.gif" />
+    <Content Include="Images\Design\icons8-trash.gif" />
+    <Content Include="Images\Design\icon_cart.png" />
+    <Content Include="Images\Design\icon_input.png" />
+    <Content Include="Images\Design\icon_Logout.64.png" />
+    <Content Include="Images\Design\icon_people.png" />
+    <Content Include="Images\Design\invoice-icon.png" />
+    <Content Include="Images\Design\lock.png" />
+    <Content Include="Images\Design\logo1.png" />
+    <Content Include="Images\Design\user.png" />
+    <Content Include="Images\SanPham\10\01.jpg" />
+    <Content Include="Images\SanPham\10\02.jpg" />
+    <Content Include="Images\SanPham\10\03.jpg" />
+    <Content Include="Images\SanPham\10\04.jpg" />
+    <Content Include="Images\SanPham\10\05.jpg" />
+    <Content Include="Images\SanPham\11\01.jpg" />
+    <Content Include="Images\SanPham\11\02.jpg" />
+    <Content Include="Images\SanPham\11\03.jpg" />
+    <Content Include="Images\SanPham\11\04.jpg" />
+    <Content Include="Images\SanPham\11\05.jpg" />
+    <Content Include="Images\SanPham\12\01.jpg" />
+    <Content Include="Images\SanPham\12\02.jpg" />
+    <Content Include="Images\SanPham\12\03.jpg" />
+    <Content Include="Images\SanPham\12\04.jpg" />
+    <Content Include="Images\SanPham\12\05.jpg" />
+    <Content Include="Images\SanPham\13\01.jpg" />
+    <Content Include="Images\SanPham\13\02.jpg" />
+    <Content Include="Images\SanPham\13\03.jpg" />
+    <Content Include="Images\SanPham\13\04.jpg" />
+    <Content Include="Images\SanPham\13\05.jpg" />
+    <Content Include="Images\SanPham\14\01.jpg" />
+    <Content Include="Images\SanPham\14\02.jpg" />
+    <Content Include="Images\SanPham\14\03.jpg" />
+    <Content Include="Images\SanPham\14\04.jpg" />
+    <Content Include="Images\SanPham\14\05.jpg" />
+    <Content Include="Images\SanPham\15\01.jpg" />
+    <Content Include="Images\SanPham\15\02.jpg" />
+    <Content Include="Images\SanPham\15\03.jpg" />
+    <Content Include="Images\SanPham\15\04.jpg" />
+    <Content Include="Images\SanPham\15\05.jpg" />
+    <Content Include="Images\SanPham\16\01.jpg" />
+    <Content Include="Images\SanPham\16\02.jpg" />
+    <Content Include="Images\SanPham\16\03.jpg" />
+    <Content Include="Images\SanPham\16\04.jpg" />
+    <Content Include="Images\SanPham\16\05.jpg" />
+    <Content Include="Images\SanPham\17\01.jpg" />
+    <Content Include="Images\SanPham\17\02.jpg" />
+    <Content Include="Images\SanPham\17\03.jpg" />
+    <Content Include="Images\SanPham\17\04.jpg" />
+    <Content Include="Images\SanPham\17\05.jpg" />
+    <Content Include="Images\SanPham\18\01.jpg" />
+    <Content Include="Images\SanPham\18\02.jpg" />
+    <Content Include="Images\SanPham\18\03.jpg" />
+    <Content Include="Images\SanPham\18\04.jpg" />
+    <Content Include="Images\SanPham\18\05.jpg" />
+    <Content Include="Images\SanPham\19\01.jpg" />
+    <Content Include="Images\SanPham\19\02.jpg" />
+    <Content Include="Images\SanPham\19\03.jpg" />
+    <Content Include="Images\SanPham\19\04.jpg" />
+    <Content Include="Images\SanPham\19\05.jpg" />
+    <Content Include="Images\SanPham\1\01.jpg" />
+    <Content Include="Images\SanPham\1\02.jpg" />
+    <Content Include="Images\SanPham\1\03.jpg" />
+    <Content Include="Images\SanPham\1\04.jpg" />
+    <Content Include="Images\SanPham\1\05.jpg" />
+    <Content Include="Images\SanPham\20\01.jpg" />
+    <Content Include="Images\SanPham\20\02.jpg" />
+    <Content Include="Images\SanPham\20\03.jpg" />
+    <Content Include="Images\SanPham\20\04.jpg" />
+    <Content Include="Images\SanPham\20\05.jpg" />
+    <Content Include="Images\SanPham\21\01.jpg" />
+    <Content Include="Images\SanPham\21\02.jpg" />
+    <Content Include="Images\SanPham\21\03.jpg" />
+    <Content Include="Images\SanPham\21\04.jpg" />
+    <Content Include="Images\SanPham\21\05.jpg" />
+    <Content Include="Images\SanPham\22\01.jpg" />
+    <Content Include="Images\SanPham\22\02.jpg" />
+    <Content Include="Images\SanPham\22\03.jpg" />
+    <Content Include="Images\SanPham\22\04.jpg" />
+    <Content Include="Images\SanPham\22\05.jpg" />
+    <Content Include="Images\SanPham\23\01.jpg" />
+    <Content Include="Images\SanPham\23\02.jpg" />
+    <Content Include="Images\SanPham\23\03.jpg" />
+    <Content Include="Images\SanPham\23\04.jpg" />
+    <Content Include="Images\SanPham\23\05.jpg" />
+    <Content Include="Images\SanPham\24\01.jpg" />
+    <Content Include="Images\SanPham\24\02.jpg" />
+    <Content Include="Images\SanPham\24\03.jpg" />
+    <Content Include="Images\SanPham\24\04.jpg" />
+    <Content Include="Images\SanPham\24\05.jpg" />
+    <Content Include="Images\SanPham\25\01.jpg" />
+    <Content Include="Images\SanPham\25\02.jpg" />
+    <Content Include="Images\SanPham\25\03.jpg" />
+    <Content Include="Images\SanPham\25\04.jpg" />
+    <Content Include="Images\SanPham\25\05.jpg" />
+    <Content Include="Images\SanPham\26\01.jpg" />
+    <Content Include="Images\SanPham\26\02.jpg" />
+    <Content Include="Images\SanPham\26\03.jpg" />
+    <Content Include="Images\SanPham\26\04.jpg" />
+    <Content Include="Images\SanPham\26\05.jpg" />
+    <Content Include="Images\SanPham\27\01.jpg" />
+    <Content Include="Images\SanPham\27\02.jpg" />
+    <Content Include="Images\SanPham\27\03.jpg" />
+    <Content Include="Images\SanPham\27\04.jpg" />
+    <Content Include="Images\SanPham\27\05.jpg" />
+    <Content Include="Images\SanPham\28\01.jpg" />
+    <Content Include="Images\SanPham\28\02.jpg" />
+    <Content Include="Images\SanPham\28\03.jpg" />
+    <Content Include="Images\SanPham\28\04.jpg" />
+    <Content Include="Images\SanPham\28\05.jpg" />
+    <Content Include="Images\SanPham\29\01.jpg" />
+    <Content Include="Images\SanPham\29\02.jpg" />
+    <Content Include="Images\SanPham\29\03.jpg" />
+    <Content Include="Images\SanPham\29\04.jpg" />
+    <Content Include="Images\SanPham\29\05.jpg" />
+    <Content Include="Images\SanPham\2\01.jpg" />
+    <Content Include="Images\SanPham\2\02.jpg" />
+    <Content Include="Images\SanPham\2\03.jpg" />
+    <Content Include="Images\SanPham\2\04.jpg" />
+    <Content Include="Images\SanPham\2\05.jpg" />
+    <Content Include="Images\SanPham\30\01.jpg" />
+    <Content Include="Images\SanPham\30\02.jpg" />
+    <Content Include="Images\SanPham\30\03.jpg" />
+    <Content Include="Images\SanPham\30\04.jpg" />
+    <Content Include="Images\SanPham\30\05.jpg" />
+    <Content Include="Images\SanPham\31\01.jpg" />
+    <Content Include="Images\SanPham\31\02.jpg" />
+    <Content Include="Images\SanPham\31\03.jpg" />
+    <Content Include="Images\SanPham\31\04.jpg" />
+    <Content Include="Images\SanPham\31\05.jpg" />
+    <Content Include="Images\SanPham\32\01.jpg" />
+    <Content Include="Images\SanPham\32\02.jpg" />
+    <Content Include="Images\SanPham\32\03.jpg" />
+    <Content Include="Images\SanPham\32\04.jpg" />
+    <Content Include="Images\SanPham\32\05.jpg" />
+    <Content Include="Images\SanPham\33\01.jpg" />
+    <Content Include="Images\SanPham\33\02.jpg" />
+    <Content Include="Images\SanPham\33\03.jpg" />
+    <Content Include="Images\SanPham\33\04.jpg" />
+    <Content Include="Images\SanPham\33\05.jpg" />
+    <Content Include="Images\SanPham\34\01.jpg" />
+    <Content Include="Images\SanPham\34\02.jpg" />
+    <Content Include="Images\SanPham\34\03.jpg" />
+    <Content Include="Images\SanPham\34\04.jpg" />
+    <Content Include="Images\SanPham\34\05.jpg" />
+    <Content Include="Images\SanPham\35\01.jpg" />
+    <Content Include="Images\SanPham\35\02.jpg" />
+    <Content Include="Images\SanPham\35\03.jpg" />
+    <Content Include="Images\SanPham\35\04.jpg" />
+    <Content Include="Images\SanPham\35\05.jpg" />
+    <Content Include="Images\SanPham\36\01.jpg" />
+    <Content Include="Images\SanPham\36\02.jpg" />
+    <Content Include="Images\SanPham\36\03.jpg" />
+    <Content Include="Images\SanPham\36\04.jpg" />
+    <Content Include="Images\SanPham\36\05.jpg" />
+    <Content Include="Images\SanPham\37\01.jpg" />
+    <Content Include="Images\SanPham\37\02.jpg" />
+    <Content Include="Images\SanPham\37\03.jpg" />
+    <Content Include="Images\SanPham\37\04.jpg" />
+    <Content Include="Images\SanPham\37\05.jpg" />
+    <Content Include="Images\SanPham\38\01.jpg" />
+    <Content Include="Images\SanPham\38\02.jpg" />
+    <Content Include="Images\SanPham\38\03.jpg" />
+    <Content Include="Images\SanPham\38\04.jpg" />
+    <Content Include="Images\SanPham\38\05.jpg" />
+    <Content Include="Images\SanPham\39\01.jpg" />
+    <Content Include="Images\SanPham\39\02.jpg" />
+    <Content Include="Images\SanPham\39\03.jpg" />
+    <Content Include="Images\SanPham\39\04.jpg" />
+    <Content Include="Images\SanPham\39\05.jpg" />
+    <Content Include="Images\SanPham\3\01.jpg" />
+    <Content Include="Images\SanPham\3\02.jpg" />
+    <Content Include="Images\SanPham\3\03.jpg" />
+    <Content Include="Images\SanPham\3\04.jpg" />
+    <Content Include="Images\SanPham\3\05.jpg" />
+    <Content Include="Images\SanPham\40\01.jpg" />
+    <Content Include="Images\SanPham\40\02.jpg" />
+    <Content Include="Images\SanPham\40\03.jpg" />
+    <Content Include="Images\SanPham\40\04.jpg" />
+    <Content Include="Images\SanPham\40\05.jpg" />
+    <Content Include="Images\SanPham\41\01.jpg" />
+    <Content Include="Images\SanPham\41\02.jpg" />
+    <Content Include="Images\SanPham\41\03.jpg" />
+    <Content Include="Images\SanPham\41\04.jpg" />
+    <Content Include="Images\SanPham\41\05.jpg" />
+    <Content Include="Images\SanPham\42\01.jpg" />
+    <Content Include="Images\SanPham\42\02.jpg" />
+    <Content Include="Images\SanPham\42\03.jpg" />
+    <Content Include="Images\SanPham\42\04.jpg" />
+    <Content Include="Images\SanPham\42\05.jpg" />
+    <Content Include="Images\SanPham\43\01.jpg" />
+    <Content Include="Images\SanPham\43\02.jpg" />
+    <Content Include="Images\SanPham\43\03.jpg" />
+    <Content Include="Images\SanPham\43\04.jpg" />
+    <Content Include="Images\SanPham\43\05.jpg" />
+    <Content Include="Images\SanPham\44\01.jpg" />
+    <Content Include="Images\SanPham\44\02.jpg" />
+    <Content Include="Images\SanPham\44\03.jpg" />
+    <Content Include="Images\SanPham\44\04.jpg" />
+    <Content Include="Images\SanPham\44\05.jpg" />
+    <Content Include="Images\SanPham\45\01.jpg" />
+    <Content Include="Images\SanPham\45\02.jpg" />
+    <Content Include="Images\SanPham\45\03.jpg" />
+    <Content Include="Images\SanPham\45\04.jpg" />
+    <Content Include="Images\SanPham\45\05.jpg" />
+    <Content Include="Images\SanPham\46\01.jpg" />
+    <Content Include="Images\SanPham\46\02.jpg" />
+    <Content Include="Images\SanPham\46\03.jpg" />
+    <Content Include="Images\SanPham\46\04.jpg" />
+    <Content Include="Images\SanPham\46\05.jpg" />
+    <Content Include="Images\SanPham\47\01.jpg" />
+    <Content Include="Images\SanPham\47\02.jpg" />
+    <Content Include="Images\SanPham\47\03.jpg" />
+    <Content Include="Images\SanPham\47\04.jpg" />
+    <Content Include="Images\SanPham\47\05.jpg" />
+    <Content Include="Images\SanPham\48\01.jpg" />
+    <Content Include="Images\SanPham\48\02.jpg" />
+    <Content Include="Images\SanPham\48\03.jpg" />
+    <Content Include="Images\SanPham\48\04.jpg" />
+    <Content Include="Images\SanPham\48\05.jpg" />
+    <Content Include="Images\SanPham\49\01.jpg" />
+    <Content Include="Images\SanPham\49\02.jpg" />
+    <Content Include="Images\SanPham\49\03.jpg" />
+    <Content Include="Images\SanPham\49\04.jpg" />
+    <Content Include="Images\SanPham\49\05.jpg" />
+    <Content Include="Images\SanPham\4\01.jpg" />
+    <Content Include="Images\SanPham\4\02.jpg" />
+    <Content Include="Images\SanPham\4\03.jpg" />
+    <Content Include="Images\SanPham\4\04.jpg" />
+    <Content Include="Images\SanPham\4\05.jpg" />
+    <Content Include="Images\SanPham\50\01.jpg" />
+    <Content Include="Images\SanPham\50\02.jpg" />
+    <Content Include="Images\SanPham\50\03.jpg" />
+    <Content Include="Images\SanPham\50\04.jpg" />
+    <Content Include="Images\SanPham\50\05.jpg" />
+    <Content Include="Images\SanPham\51\01.jpg" />
+    <Content Include="Images\SanPham\51\02.jpg" />
+    <Content Include="Images\SanPham\51\03.jpg" />
+    <Content Include="Images\SanPham\51\04.jpg" />
+    <Content Include="Images\SanPham\51\05.jpg" />
+    <Content Include="Images\SanPham\52\01.jpg" />
+    <Content Include="Images\SanPham\52\02.jpg" />
+    <Content Include="Images\SanPham\52\03.jpg" />
+    <Content Include="Images\SanPham\52\04.jpg" />
+    <Content Include="Images\SanPham\52\05.jpg" />
+    <Content Include="Images\SanPham\53\01.jpg" />
+    <Content Include="Images\SanPham\53\02.jpg" />
+    <Content Include="Images\SanPham\53\03.jpg" />
+    <Content Include="Images\SanPham\53\04.jpg" />
+    <Content Include="Images\SanPham\53\05.jpg" />
+    <Content Include="Images\SanPham\54\01.jpg" />
+    <Content Include="Images\SanPham\54\02.jpg" />
+    <Content Include="Images\SanPham\54\03.jpg" />
+    <Content Include="Images\SanPham\54\04.jpg" />
+    <Content Include="Images\SanPham\54\05.jpg" />
+    <Content Include="Images\SanPham\55\01.jpg" />
+    <Content Include="Images\SanPham\55\02.jpg" />
+    <Content Include="Images\SanPham\55\03.jpg" />
+    <Content Include="Images\SanPham\55\04.jpg" />
+    <Content Include="Images\SanPham\55\05.jpg" />
+    <Content Include="Images\SanPham\56\01.jpg" />
+    <Content Include="Images\SanPham\56\02.jpg" />
+    <Content Include="Images\SanPham\56\03.jpg" />
+    <Content Include="Images\SanPham\56\04.jpg" />
+    <Content Include="Images\SanPham\56\05.jpg" />
+    <Content Include="Images\SanPham\57\01.jpg" />
+    <Content Include="Images\SanPham\57\02.jpg" />
+    <Content Include="Images\SanPham\57\03.jpg" />
+    <Content Include="Images\SanPham\57\04.jpg" />
+    <Content Include="Images\SanPham\57\05.jpg" />
+    <Content Include="Images\SanPham\58\01.jpg" />
+    <Content Include="Images\SanPham\58\02.jpg" />
+    <Content Include="Images\SanPham\58\03.jpg" />
+    <Content Include="Images\SanPham\58\04.jpg" />
+    <Content Include="Images\SanPham\58\05.jpg" />
+    <Content Include="Images\SanPham\59\01.jpg" />
+    <Content Include="Images\SanPham\59\02.jpg" />
+    <Content Include="Images\SanPham\59\03.jpg" />
+    <Content Include="Images\SanPham\59\04.jpg" />
+    <Content Include="Images\SanPham\59\05.jpg" />
+    <Content Include="Images\SanPham\5\01.jpg" />
+    <Content Include="Images\SanPham\5\02.jpg" />
+    <Content Include="Images\SanPham\5\03.jpg" />
+    <Content Include="Images\SanPham\5\04.jpg" />
+    <Content Include="Images\SanPham\5\05.jpg" />
+    <Content Include="Images\SanPham\60\01.jpg" />
+    <Content Include="Images\SanPham\60\02.jpg" />
+    <Content Include="Images\SanPham\60\03.jpg" />
+    <Content Include="Images\SanPham\60\04.jpg" />
+    <Content Include="Images\SanPham\60\05.jpg" />
+    <Content Include="Images\SanPham\61\01.jpg" />
+    <Content Include="Images\SanPham\62\01.jpg" />
+    <Content Include="Images\SanPham\63\01.jpg" />
+    <Content Include="Images\SanPham\64\01.jpg" />
+    <Content Include="Images\SanPham\65\01.jpg" />
+    <Content Include="Images\SanPham\66\01.jpg" />
+    <Content Include="Images\SanPham\67\01.jpg" />
+    <Content Include="Images\SanPham\68\01.jpg" />
+    <Content Include="Images\SanPham\69\01.jpg" />
+    <Content Include="Images\SanPham\6\01.jpg" />
+    <Content Include="Images\SanPham\6\02.jpg" />
+    <Content Include="Images\SanPham\6\03.jpg" />
+    <Content Include="Images\SanPham\6\04.jpg" />
+    <Content Include="Images\SanPham\6\05.jpg" />
+    <Content Include="Images\SanPham\70\01.jpg" />
+    <Content Include="Images\SanPham\7\01.jpg" />
+    <Content Include="Images\SanPham\7\02.jpg" />
+    <Content Include="Images\SanPham\7\03.jpg" />
+    <Content Include="Images\SanPham\7\04.jpg" />
+    <Content Include="Images\SanPham\7\05.jpg" />
+    <Content Include="Images\SanPham\8\01.jpg" />
+    <Content Include="Images\SanPham\8\02.jpg" />
+    <Content Include="Images\SanPham\8\03.jpg" />
+    <Content Include="Images\SanPham\8\04.jpg" />
+    <Content Include="Images\SanPham\8\05.jpg" />
+    <Content Include="Images\SanPham\9\01.jpg" />
+    <Content Include="Images\SanPham\9\02.jpg" />
+    <Content Include="Images\SanPham\9\03.jpg" />
+    <Content Include="Images\SanPham\9\04.jpg" />
+    <Content Include="Images\SanPham\9\05.jpg" />
+    <None Include="Resources\tonghd_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
